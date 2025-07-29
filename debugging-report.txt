@@ -1,0 +1,51 @@
+26 March 2025 	
+        - Encounter Issue Connecting to the Database
+		- Caused by error 500 (Internal Server Error)
+		- Initial Troubleshooting is to use POSTMAN to debug
+		- Error is not solved
+
+31 March 2025 	
+        - Able to Connect to the Database by npx prisma generate
+		- But Encounter Issue on inserting data to table 
+		- Cause by JSON issue
+
+1 April 2025 	
+        - Able to Insert Data to the database
+		- Solved by creating a router page on login and signup 
+		  which is used to connect frontend to POST to backend
+
+8 April 2025
+		- Unable to see Sidebar 
+		- Unable to see Processes 
+		- Caused by:
+			Error: Failed to fetch playbooks: 400
+    		at EnhancedSidebar.useEffect.fetchPlaybooks (http://localhost:3000/_next/static/chunks/src_f6a6f0bc._.js:777:35)
+
+			Error: Failed to fetch processes
+    		at Dashboard.useEffect.fetchProcesses (http://localhost:3000/_next/static/chunks/src_f6a6f0bc._.js:1032:49)
+
+			Error: Failed to fetch playbooks: 500
+    		at EnhancedSidebar.useEffect.fetchPlaybooks (http://localhost:3000/_next/static/chunks/src_f6a6f0bc._.js:777:35)
+
+			Error: Failed to fetch playbooks: 500
+    		at Dashboard.useEffect.fetchPlaybooks (http://localhost:3000/_next/static/chunks/src_f6a6f0bc._.js:1059:35)
+
+10 April 2025 
+		- Error fixed for:
+			✅ Error: Failed to fetch processes
+    		at Dashboard.useEffect.fetchProcesses (http://localhost:3000/_next/static/chunks/src_f6a6f0bc._.js:1032:49)
+
+			✅ Error: Failed to fetch playbooks: 500
+    		at EnhancedSidebar.useEffect.fetchPlaybooks (http://localhost:3000/_next/static/chunks/src_f6a6f0bc._.js:777:35)
+
+			✅ Error: Failed to fetch playbooks: 500
+    		at Dashboard.useEffect.fetchPlaybooks (http://localhost:3000/_next/static/chunks/src_f6a6f0bc._.js:1059:35)
+		- Issue found due to:
+		nodes: {
+          //   include: {
+          //       // parameters: true // Ensure this relation exists in the schema before including it
+          //   }
+          // },
+		  - Explanation:
+		  You're not requesting a parameters relation inside the nodes, 
+		  so Prisma just fetches the nodes without trying to include a non-existent relation, and everything works fine.

@@ -1,0 +1,54 @@
+.main-container{
+    display: flex;
+
+    flex-direction: column;
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 50px;
+    min-height: 200px;
+}
+.content{
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 130px;
+    min-width: 780px;
+}
+
+.button-bar{
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.question-box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #16151b;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.question-input{
+    flex-grow: 1;
+    resize: both;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 3px;
+}

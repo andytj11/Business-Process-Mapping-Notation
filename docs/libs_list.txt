@@ -1,0 +1,69 @@
+---------DIAGRAMMING LIBS----------
+1. BPMN.io
+    pros:
+        - focused on business process model and notation
+        - open-source & free
+        - lightweight
+    cons:
+        - limited support for non-bpmn diagrams
+
+2. GoJs
+    pros:
+        - lots of features for diagrams, process flows
+        - high customization  --> lots of colours and anims
+        - can handle large diagrams
+    cons:
+        - licensable
+        - codebase and configs can be complex
+
+3. JointJS/ Rappid
+    pros:
+        - diagrams customization
+        - supports bpmn
+        - handles complex workflows
+    cons:
+        - steep learning curve
+        - Rappid commercial - expensive
+
+-------- FRONTEND ----------
+1. React flow
+    pros:
+        - supports node-based workflows
+        -  high customizability
+    cons:
+        - limited to react ecosystem
+        - need high familiarity
+
+2. stateful.js
+    pros:
+        - lightweight, simple
+        - integrates well with vanilla js/ts projects
+    cons:
+        - limited to simple diagrams
+
+3. konva.js
+    pros:   
+        - build highly interactive graphics
+        - easy to use api for canvas based rendering
+        - object oriented API for many shapes
+    cons:
+        - not a dedecated diagramming lib.
+        - more effort needed for process-specific tools
+
+------ others:
+    - jinjaJs -> compile jinja2 frameworks (flask, django) in JS
+    - AnyChart
+    - webix -> cross-platform web apps toolkit
+    - jQueryUI, jQWidgets -> GUI widgets, anims, themes, etc.
+    - knockout -> js implementation/ template of model-view-view model pattern
+    - mojito -> model-view-controller web app framework
+    - modernizr -> detects if user's browser is unable to support web app's features 
+    - vueJs -> framework for building UI.
+        -> uses mainly html, 
+            - (react.js uses jsx + html)
+
+-------TESTING FRAMEWORKS--------
+1. Jest 
+2. Cypress
+3. QUnit
+

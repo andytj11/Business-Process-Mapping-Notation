@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define color variables */
+:root {
+  /* Color System */
+  --oxford-blue: #14213D;
+  --gold: #FEC872;
+  --gold-light: #FFE0A3;
+  --black: #000000;
+  --grey: #E5E5E5;
+  --white: #FFFFFF;
+  
+  /* Functional Colors */
+  --background: var(--white);
+  --foreground: var(--black);
+  --primary: var(--oxford-blue);
+  --primary-hover: #1d2d4d;
+  --accent: var(--gold);
+  --accent-hover: #ffb649;
+  --accent-light: var(--gold-light);
+  --text-primary: var(--black);
+  --text-secondary: var(--grey);
+  --text-on-primary: var(--white);
+  --text-on-accent: var(--black);
+
+  /* Layout variables */
+  --navbar-height: 4rem; /* Define navbar height as a variable for consistency */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1A1A1A;
+    --foreground: var(--white);
+    --primary: #192b4a;
+    --primary-hover: #253959;
+    --accent: #eab456;
+    --accent-hover: #d9a037;
+    --accent-light: #f0c685;
+    --text-primary: var(--white);
+    --text-secondary: #B8B8B8;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: var(--navbar-height); /* Add padding to body equal to navbar height */
+}
+
+/* Additional styles for auth container */
+.auth-container {
+  max-height: 100vh;
+  padding: 2rem 0;
+}
+
+@media (min-height: 800px) {
+  .auth-container {
+    padding: 4rem 0;
+  }
+}
+
+@media (min-height: 1200px) {
+  .auth-container {
+    padding: 6rem 0;
+  }
+}
+
+/* Update main content top margin to use the variable */
+main {
+  margin-top: var(--navbar-height);
+}
+
+/* Fix for mobile view to ensure content doesn't get hidden behind the navbar */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 3.5rem; /* Slightly smaller navbar on mobile */
+  }
+}
+
+/* Apply page-container class to main content areas */
+.page-container {
+  padding-top: calc(var(--navbar-height) + 1rem);
+  min-height: 100vh;
+}

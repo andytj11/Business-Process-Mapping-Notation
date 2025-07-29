@@ -1,0 +1,424 @@
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.mainContentColumn { /* Added style */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0; /* Override default Col padding if needed, or manage padding in children */
+}
+
+.processHeader {
+  background-color: #f5f9ff;
+  border: 1px solid #d0e1fd;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.processHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1565c0;
+}
+
+.processInfo {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.modelerWrapper {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: relative; /* For bpmn-js container */
+  min-height: 0; /* Ensure flex-grow works, remove fixed min-height */
+}
+
+.modelerContainer { /* Increase from 600px to 800px */
+  width: 100%;
+  height: 100%; /* Use 100% of wrapper height */
+  position: relative;
+}
+
+/* Add styles for playbook selection */
+.playbookSelector {
+  margin-bottom: 16px;
+}
+
+.playbookSelectorLabel {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Style for the no playbooks message */
+.noPlaybooksMessage {
+  background-color: #fff3cd;
+  border: 1px solid #ffecb5;
+  color: #856404;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.actionsBar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.saveButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.successAlert {
+  background-color: #e8f5e9;
+  border: 1px solid #81c784;
+  color: #2e7d32;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.debugSection {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.debugHeader {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.debugHeader h2 {
+  font-size: 1.25rem;
+  color: #14213D;
+}
+
+.debugHeader p {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.selectedElement {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.selectedElement h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.elementDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.elementDetails div {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.debugTable {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.debugTable table {
+  width: 100%;
+  font-size: 0.8rem;
+  border-collapse: collapse;
+}
+
+.debugTable th, 
+.debugTable td {
+  padding: 0.4rem;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.debugTable th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.debugTable td:last-child, .debugTable th:last-child {
+    /* width: 1%; */ /* To make it shrink if needed */
+}
+
+.emptyState {
+  text-align: center !important;
+  padding: 2rem !important;
+  color: #6c757d;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  color: #fff;
+}
+
+.createBadge { background-color: #28a745; } /* Green */
+.updateBadge { background-color: #ffc107; color: #212529;} /* Yellow */
+.deleteBadge { background-color: #dc3545; } /* Red */
+.saveBadge { background-color: #007bff; }   /* Blue */
+.loadBadge { background-color: #17a2b8; }  /* Teal */
+
+.databaseStats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto; /* Pushes to bottom if debugSection is flex column */
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.statCard {
+  text-align: center;
+}
+
+.statCard h4 {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #14213D;
+}
+
+.errorPanel {
+  background-color: #ffebee;
+  border: 1px solid #ef5350;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: #b71c1c;
+}
+
+.errorPanel h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.errorPanel p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+  
+  .elementDetails {
+    grid-template-columns: 1fr;
+  }
+  
+  .databaseStats {
+    flex-direction: column;
+  }
+}
+
+/* Add the deleteButton style */
+.deleteButton {
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.formContainer {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.formField {
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.formButton:hover {
+  background-color: #45a049;
+}
+
+.formButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.modelerPageContainer {
+  padding-top: 70px; /* Adjusted for fixed navbar height */
+  padding-bottom: 1rem;
+  height: calc(100vh - 70px); /* Adjusted for fixed navbar height */
+  display: flex;
+  flex-direction: column;
+}
+
+.modelerLayoutRow {
+  flex-grow: 1; /* Allow row to take available space */
+  display: flex; /* Use flex for columns */
+  min-height: 0; /* Prevent flex items from overflowing */
+}
+
+.modelerColumn {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow this column to grow */
+  min-height: 0; /* Necessary for flex children in some cases */
+  padding: 0.5rem;
+}
+
+.debugColumn {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height of the row */
+  padding: 0.5rem;
+  overflow-y: auto; /* Allow debug panel to scroll */
+  background-color: #f8f9fa;
+  border-left: 1px solid #dee2e6;
+}
+
+.modelerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modelerHeader h3 {
+  margin-bottom: 0;
+  color: #14213D;
+}
+
+.modelerLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.stickyError {
+  position: sticky;
+  top: 10px; /* Adjust as needed */
+  z-index: 1050; /* Ensure it's above other content */
+  margin: 1rem;
+}

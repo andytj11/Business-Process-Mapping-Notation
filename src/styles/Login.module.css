@@ -1,0 +1,100 @@
+/* Container for the login page */
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 64px; /* Adjust based on navbar height */
+  left: 0;
+  width: 100vw;
+  min-height: calc(100vh - 64px); /* Subtract navbar height */
+  background-color: #f4f4f9;
+}
+
+/* Login box */
+.loginBox {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Login button */
+.button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Signup link */
+.signupText {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+.link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0056b3;
+}
+
+/* Main content styling */
+.mainContent {
+  padding: 40px;
+  text-align: center;
+}
+
+.mainContent h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.mainContent p {
+  font-size: 18px;
+  color: #666;
+}

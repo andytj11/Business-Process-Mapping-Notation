@@ -1,0 +1,119 @@
+.accountContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .accountBox {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+    text-align: center;
+  }
+  
+  .userInfo {
+    margin-bottom: 2rem;
+    word-break: break-word;
+  }
+  
+  .userInfo p {
+    margin: 0.5rem 0;
+    color: #495057;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .passwordWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .toggleButton {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+  
+  .logoutButton {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .logoutButton:hover {
+    background-color: #c82333;
+  }
+  
+  .nameEditWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 300px;
+  }
+  
+  .nameInput {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .nameButtons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .nameButton {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .saveButton {
+    background-color: #198754;
+    color: white;
+  }
+  
+  .saveButton:hover {
+    background-color: #157347;
+  }
+  
+  .cancelButton {
+    background-color: #adb5bd;
+    color: white;
+  }
+  
+  .cancelButton:hover {
+    background-color: #6c757d;
+  }
+  

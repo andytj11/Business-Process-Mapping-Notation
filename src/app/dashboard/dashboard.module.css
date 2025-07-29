@@ -1,0 +1,35 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px); /* Adjust based on your navbar height */
+}
+
+.sidebarColumn {
+  width: 350px;
+  padding: 16px;
+}
+
+.contentColumn {
+  flex: 1;
+  padding: 20px;
+}
+
+@media (min-width: 992px) {
+  .dashboardContainer {
+    flex-direction: row;
+  }
+  
+  .sidebarColumn {
+    position: sticky;
+    top: 64px; /* Adjust based on your navbar height */
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebarColumn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
